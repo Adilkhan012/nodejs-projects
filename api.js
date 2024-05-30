@@ -30,10 +30,10 @@ router.get('/metadata/:tokenId', async (req, res) => {
 router.get('/images/:domainName', async (req, res) => {
   const dstPath = 'watermark.jpg'
   const options = {
-    text: `@${req.params.domainName}.lazi`,
+    text: `@${req.params.domainName}.Litfam`,
     dstPath,
   }
-  await addTextWatermark('lazi.jpeg', options, () => {
+  await addTextWatermark('LITFAM.jpeg', options, () => {
     res.sendFile(__dirname + '/' + dstPath)
   })
 })
